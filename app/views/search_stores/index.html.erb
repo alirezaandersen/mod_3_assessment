@@ -2,7 +2,9 @@
 
 
 <% @stores.each.with_index do |store,index| %>
-  <% unless index%>
+  <% if index <= 14 %>
+  <ul>
+    <li><%=index+1%></li>
   <li>Long Name:<%=store.name%></li>
    <li>Address: <%= store.address %></li>
    <li>City: <%= store.city %></li>
@@ -10,6 +12,6 @@
    <li>Phone Number: <%= store.phone %></li>
    <li>Hours: <%= store.hours %></li>
    <li>Store Type: <%= store.store_type %></li>
+ </ul>
+   <% end %>
 <% end %>
-
-expect(page).to have_content "15 results" #need to do some sort of pagination

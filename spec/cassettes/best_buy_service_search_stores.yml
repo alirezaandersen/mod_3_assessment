@@ -1,0 +1,222 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=z2ehwc7a6wvbg8n7sbmu7nuy&format=json&pageSize=17&show=storeId,storeType,longName,distance,address,hours,city,phone
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 14 Jun 2016 16:56:07 GMT
+      Server:
+      - thin 1.6.1 codename Death Proof
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-123.mashery.com
+      Content-Length:
+      - '5976'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "from": 1,
+          "to": 17,
+          "total": 17,
+          "currentPage": 1,
+          "totalPages": 1,
+          "queryTime": "0.003",
+          "totalTime": "0.016",
+          "partial": false,
+          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=storeId,storeType,longName,distance,address,hours,city,phone&format=json&apiKey=z2ehwc7a6wvbg8n7sbmu7nuy",
+          "stores": [
+            {
+              "storeId": 2740,
+              "storeType": "Mobile",
+              "longName": "Best Buy Mobile - Cherry Creek Shopping Center",
+              "distance": 3.25,
+              "address": "3000 East First Ave",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6",
+              "city": "Denver",
+              "phone": "303-270-9189"
+            },
+            {
+              "storeId": 1224,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Belmar",
+              "distance": 5.28,
+              "address": "384 S. Wadsworth Blvd",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Lakewood",
+              "phone": "303-742-8039"
+            },
+            {
+              "storeId": 211,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Colorado Blvd",
+              "distance": 5.61,
+              "address": "4100 E Mexico Ave",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Denver",
+              "phone": "303-758-5805"
+            },
+            {
+              "storeId": 382,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Denver West",
+              "distance": 8.38,
+              "address": "1400 Denver West Blvd",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Lakewood",
+              "phone": "303-273-5617"
+            },
+            {
+              "storeId": 209,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Westminster",
+              "distance": 8.54,
+              "address": "9369 Sheridan Blvd",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-10; Sat: 10-10; Sun: 10-8",
+              "city": "Westminster",
+              "phone": "303-426-4434"
+            },
+            {
+              "storeId": 2737,
+              "storeType": "Mobile",
+              "longName": "Best Buy Mobile - Colorado Mills",
+              "distance": 8.59,
+              "address": "14500 West Colfax Avenue",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6",
+              "city": "Lakewood",
+              "phone": "303-278-0601"
+            },
+            {
+              "storeId": 1416,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Northglenn",
+              "distance": 9.12,
+              "address": "104 W 104th Ave",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-10; Sat: 10-10; Sun: 10-8",
+              "city": "Denver",
+              "phone": "303-252-8677"
+            },
+            {
+              "storeId": 2730,
+              "storeType": "Mobile",
+              "longName": "Best Buy Mobile - Town Center at Aurora",
+              "distance": 9.66,
+              "address": "14200 East Alameda Avenue",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6",
+              "city": "Aurora",
+              "phone": "303-326-0848"
+            },
+            {
+              "storeId": 217,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Aurora",
+              "distance": 9.83,
+              "address": "13801 E Mississippi Ave",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Aurora",
+              "phone": "303-338-5797"
+            },
+            {
+              "storeId": 210,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Littleton",
+              "distance": 10.45,
+              "address": "5395 S Wadsworth Blvd",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Littleton",
+              "phone": "303-932-7830"
+            },
+            {
+              "storeId": 1171,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Southglenn",
+              "distance": 11.0,
+              "address": "6707 S Vine St",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Centennial",
+              "phone": "303-797-3246"
+            },
+            {
+              "storeId": 1134,
+              "storeType": "BigBox",
+              "longName": "Best Buy - I70 & Tower Rd",
+              "distance": 11.73,
+              "address": "3511 N Salida Ct",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Aurora",
+              "phone": "303-373-9284"
+            },
+            {
+              "storeId": 2953,
+              "storeType": "Mobile",
+              "longName": "Best Buy Mobile - Flatiron Crossing Mall ",
+              "distance": 14.44,
+              "address": "1 W Flatiron Crossing Dr",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6",
+              "city": "Broomfield",
+              "phone": "303-466-8624"
+            },
+            {
+              "storeId": 164,
+              "storeType": "BigBox",
+              "longName": "Best Buy - S.E. Denver",
+              "distance": 14.98,
+              "address": "8682 Park Meadows Center Dr",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Lone Tree",
+              "phone": "303-649-9474"
+            },
+            {
+              "storeId": 694,
+              "storeType": "BigBox",
+              "longName": "Best Buy - S.E. Aurora",
+              "distance": 18.51,
+              "address": "5999 S Southlands Pkwy",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Aurora",
+              "phone": "303-693-0166"
+            },
+            {
+              "storeId": 1410,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Parker",
+              "distance": 20.85,
+              "address": "11267 Pikes Peak Dr",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Parker",
+              "phone": "303-840-5501"
+            },
+            {
+              "storeId": 1031,
+              "storeType": "BigBox",
+              "longName": "Best Buy - Boulder",
+              "distance": 22.79,
+              "address": "1740 30th St",
+              "hours": "Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8",
+              "city": "Boulder",
+              "phone": "303-938-2889"
+            }
+          ],
+          "warnings": "Distances are in terms of miles (default)"
+        }
+    http_version: 
+  recorded_at: Tue, 14 Jun 2016 16:56:07 GMT
+recorded_with: VCR 3.0.3

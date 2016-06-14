@@ -1,4 +1,4 @@
-rails 'helper'
+require 'rails_helper'
 
 # As a user
 # When I visit "/"
@@ -14,20 +14,21 @@ RSpec.feature "Use can search zipcode and find store within radious" do
 
     visit "/"
 
-    fill_in "search by zipcode" with: "80202"
-    fill_in "distance", with: "25"
-
+    fill_in "search by zipcode", with: "80202"
+    fill_in "raidious", with: "25"
+    VCR.use_cassette("best_buy_service#search_stores") do
     click_on "search"
 
-    expect(current_path)to. eq "/search"
-
-    expect(page).to have_content
+    expect(current_path).to eq "/search"
+    #binding.pry
     expect(page).to have_content "17 Total Stores"
-    expect(page).to have_content "15 results" #need to do some sort of pagination
-    expect(page).to have_content "long_name:"
-    expect(page).to have_content "city:"
-    expect(page).to have_content "distance:"
-    expect(page).to have_content "phone number:"
-    expect(page).to have_content "store type:"
+    expect(page).to have_content "Long Name:Best Buy Mobile - Cherry Creek Shopping Center"
+    expect(page).to have_content "Address: 3000 East First Ave"
+    expect(page).to have_content "City: Denver"
+    expect(page).to have_content "Distance: 3.25"
+    expect(page).to have_content "Phone Number: 303-270-9189"
+    expect(page).to have_content "Hours: Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6"
+    expect(page).to have_content "Store Type: Mobile"
   end
+end
 end
