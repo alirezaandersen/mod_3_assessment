@@ -19,9 +19,10 @@ class BestBuySearch
   end
 
   def self.find_by(params)
+    binding.pry
     data = service.search_stores({
-      :zip => params["zip"],
-      :raidious => params["distance"]
+      [:zip] => params[:zip],
+      [:raidious] => params[:raidous]
       })
       binding.pry
     data[:stores].map do |store|
