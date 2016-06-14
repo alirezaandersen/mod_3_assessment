@@ -1,11 +1,12 @@
 class BestBuySearch
 
-  attr_reader :store_id, :store_type, :long_name, :city, :distance, :phone, :address, :hours
+  attr_reader :store_id, :store_type, :long_name, :city, :distance, :phone, :address, :hours, :name
 
   def initialize(data)
-    @store_id = data[:store_id]
-    @store_type= data[:store_type]
-    @name = data[:long_name]
+    #binding.pry
+    @store_id = data[:storeId]
+    @store_type= data[:storeType]
+    @name = data[:longName]
     @city = data[:city]
     @distance = data[:distance]
     @phone = data[:phone]
@@ -23,7 +24,7 @@ class BestBuySearch
     radius = params[:search][:raidious]
     data = service.search_stores(zip,radius)
     #binding.pry
-    data.map do |store|
+    data[:stores].map do |store|
       self.new(store)
     end
   end
