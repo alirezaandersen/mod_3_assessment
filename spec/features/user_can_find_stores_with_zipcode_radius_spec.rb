@@ -26,6 +26,6 @@ RSpec.feature "Use can search zipcode and find store within radious" do
     expect(page).to have_content "15 results" #need to do some sort of pagination
     expect(page).to have_content "long_name:"
     expect(page).to have_content "city:"
-    expect(page).to have_content "distrance:"
+    expect(page).to have_content "distance:"
     expect(page).to have_content "phone number:"
     expect(page).to have_content "store type:"
