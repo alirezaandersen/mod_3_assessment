@@ -6,11 +6,11 @@ class BestBuySearch
     @store_id = data[:store_id]
     @store_type= data[:store_type]
     @name = data[:long_name]
-    @store = data[:city]
-    @store = data[:distance]
-    @store = data[:phone]
-    @store = data[:address]
-    @store = data[:hours]
+    @city = data[:city]
+    @distance = data[:distance]
+    @phone = data[:phone]
+    @address = data[:address]
+    @hours = data[:hours]
 
   end
 
@@ -19,16 +19,12 @@ class BestBuySearch
   end
 
   def self.find_by(params)
-    binding.pry
-    data = service.search_stores({
-      [:zip] => params[:zip],
-      [:raidious] => params[:raidous]
-      })
-      binding.pry
-    data[:stores].map do |store|
+    zip = params[:search][:zip]
+    radius = params[:search][:raidious]
+    data = service.search_stores(zip,radius)
+    #binding.pry
+    data.map do |store|
       self.new(store)
     end
-    # binding.pry
   end
-
-  end
+end

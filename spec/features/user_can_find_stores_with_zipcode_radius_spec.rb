@@ -29,3 +29,5 @@ RSpec.feature "Use can search zipcode and find store within radious" do
     expect(page).to have_content "distance:"
     expect(page).to have_content "phone number:"
     expect(page).to have_content "store type:"
+  end
+end
