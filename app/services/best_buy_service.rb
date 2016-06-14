@@ -13,8 +13,8 @@ class BestBuyService
 
   def search_stores(search_text, params=nil)
     encoded_search_text = URI.encode(search_text)
-    json = json_request(@connection.get("/v1/stores(area("80202",25))?show=storeId,storeType,name")
+    json = json_request(@connection.get("/v1/stores(area("80202",25))?&show=storeId,storeType,longName,city,phone&pageSize=15")
   end
-
-  # /v1/stores(area("80202",25))?show=storeId,storeType,name&format=json&apiKey="
+# And I should see the long name, city, distance, phone number and store type for each of the 15 results
+# /v1/stores(area(80202,25))?format=json&show=storeId,storeType,longName,city,phone&pageSize=15
 end
