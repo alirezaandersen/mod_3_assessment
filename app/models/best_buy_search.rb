@@ -30,9 +30,10 @@ class BestBuySearch
   end
 
   def self.find(id)
-    binding.pry
-    data = service.search_stores_by_id(id)
-    #binding.p
+    #binding.pry
+    data = service.get_store_details_by_id(id)
+    self.new(data)
+    #binding.pry
 
 end
 end

@@ -7,7 +7,8 @@ class SearchStoresController < ApplicationController
 
   def show
     @store = BestBuySearch.find(params[:id])
+    @hours = @store.hours.split('; ')
   end
 
-  
+
 end

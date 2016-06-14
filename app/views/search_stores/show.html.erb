@@ -1,0 +1,13 @@
+<ul>
+<li>Long Name:<%=@store.name%></li>
+ <li>Address: <%= @store.address %></li>
+ <li>City: <%= @store.city %></li>
+ <li>Distance: <%= @store.distance %></li>
+ <li>Phone Number: <%= @store.phone %></li>
+ <li>Store Type: <%= @store.store_type %></li>
+<ul>
+ <% @hours.each do |hour| %>
+  <li><%= hour %></li>
+ <% end %>
+ </ul>
+</ul>
