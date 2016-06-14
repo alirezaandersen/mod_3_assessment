@@ -12,7 +12,7 @@ rails 'helper'
 # RSpec.describe BestBuyService do
 #   it "returns store address" do
 #   VCR.use_cassette("best_buy_service#index") do
-#   params = { }
+#   params = {search by zipcode, }
 #
 #     end
 #   end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'items#index'
 
   get "/search", to: "search_stores#index"
+  get "/search/stores/:id", to:"search_stores#show"
 
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show]

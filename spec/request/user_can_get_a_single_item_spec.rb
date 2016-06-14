@@ -20,9 +20,7 @@ RSpec.describe "GET /api/v1/items/:id", :type => :request do
     expect(item_info[:created_at]).to be_nil
     expect(item_info[:updated_at]).to be_nil
   end
-
 end
-
 
 # When I send a GET request to /api/v1/items/1
 # I receive a 200 JSON response containing the name, description,
