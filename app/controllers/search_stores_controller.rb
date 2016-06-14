@@ -5,5 +5,9 @@ class SearchStoresController < ApplicationController
     @stores = BestBuySearch.find_by(params)
   end
 
-  def show = 
+  def show
+    @store = BestBuySearch.find(params[:id])
+  end
+
+  
 end

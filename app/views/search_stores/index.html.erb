@@ -5,7 +5,7 @@
   <% if index <= 14 %>
   <ul>
     <li><%=index+1%></li>
-  <li>Long Name:<%=store.name%></li>
+  <li>Long Name:<%=link_to store.name, "/search/stores/#{store.store_id}"%></li>
    <li>Address: <%= store.address %></li>
    <li>City: <%= store.city %></li>
    <li>Distance: <%= store.distance %></li>
